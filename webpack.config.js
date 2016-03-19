@@ -7,6 +7,9 @@ module.exports = {
       test: /\.jsx?$/,
       exclude: /node_modules/,
       loader: 'babel'
+    }, {
+      test: /\.scss$/,
+      loader: 'style!css!sass!autoprefixer?browsers=last 2 versions'
     }]
   },
   resolve: {
