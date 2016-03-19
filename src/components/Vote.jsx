@@ -3,6 +3,9 @@ import React from 'react';
 class Vote extends React.Component {
   constructor(props) {
     super(props);
+
+    this.isDisabled = this.isDisabled.bind(this);
+    this.hasVotedFor = this.hasVotedFor.bind(this);
   }
 
   getPair() {
@@ -14,7 +17,7 @@ class Vote extends React.Component {
   }
 
   hasVotedFor(entry) {
-    return this.prop.hasVoted === entry;
+    return this.props.hasVoted === entry;
   }
 
   render() {
@@ -34,3 +37,4 @@ class Vote extends React.Component {
     );
   }
 }
+export default Vote;
