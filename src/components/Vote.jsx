@@ -1,4 +1,6 @@
 import React from 'react';
+import PureRenderMixin from 'react-addons-pure-render-mixin';
+import ReactMixin from 'react-mixin';
 
 class Vote extends React.Component {
   constructor(props) {
@@ -36,5 +38,6 @@ class Vote extends React.Component {
       </div>
     );
   }
-}
+};
+ReactMixin(Vote.prototype, PureRenderMixin);
 export default Vote;

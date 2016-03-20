@@ -1,4 +1,6 @@
 import React from 'react';
+import PureRenderMixin from 'react-addons-pure-render-mixin';
+import ReactMixin from 'react-mixin';
 
 class Winner extends React.Component {
   constructor(props) {
@@ -13,4 +15,5 @@ class Winner extends React.Component {
     );
   }
 };
+ReactMixin(Winner.prototype, PureRenderMixin);
 export default Winner;
